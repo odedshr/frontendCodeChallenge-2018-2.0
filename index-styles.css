@@ -1,0 +1,86 @@
+body {
+    font: 17px/1.3 BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --color-not-white: #FBFBFB;
+    --color-white: #f9f9f9;
+    --color-grey: #505050;
+    background-color: var(--color-not-white);
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 2rem;
+}
+
+.readableWidth {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.content {
+    min-height: 700px;
+    padding: 2ch;
+    display: grid;
+    grid-gap: 20px;
+    color: var(--color-grey);
+    line-height: 1.6;
+}
+
+@media (min-width: 960px) {
+    .content {
+        grid-template-columns: 1fr 300px;
+        padding: 0;
+    }
+}
+
+
+aside {
+    height: fit-content;
+}
+
+.h1 {
+    --text-color: var(--color-grey);
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.h2 {
+    --text-color: var(--color-grey);
+    color: var(--text-color);
+    font-size: 1.7rem;
+    margin: 0 0 0.3rem 0;
+}
+
+.h3 {
+    --text-color: var(--color-grey);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 0 0 0.2rem 0;
+}
+
+.leading {
+    height: 270px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: url('https://public-media.interaction-design.org/images/careers/team-trips--3.jpg') center var(--color-grey) no-repeat;
+    background-size: cover;
+    color: var(--color-white);
+    text-shadow: 0 0 5px #000;
+}
+
+.leading__bigtext {
+    font-weight: bold;
+    font-size: 6vw;
+    margin: 0 0 .6vw 0;
+}
+
+.leading__text {
+    font-size: 1.2em;
+    line-height: 1.4em;
+}

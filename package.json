@@ -1,0 +1,11 @@
+{
+  "name": "idf-fe-code-challenge-2018",
+  "version": "2.0.0",
+  "description": "IDF front-end code challenge",
+  "main": "images/images.html",
+  "author": "IDF",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26"
+  }
+}

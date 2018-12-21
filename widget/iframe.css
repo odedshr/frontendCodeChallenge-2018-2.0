@@ -1,0 +1,11 @@
+.idf-iframe {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);  
+  height: 640px;
+  width: 300px;
+}
+
+.idf-iframe.extended {
+  height: 930px;
+}

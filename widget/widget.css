@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+  margin: 0;
+  padding: 0;
+}
+
+.articlesWidget__logo {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.articlesWidget__header {
+  border-bottom: 3px solid #009cde;
+  display: inline-block;
+  font-stretch: condensed;
+  font-size: 16px;
+  margin: 0 0 0 10px;
+  padding-bottom: 3px;
+}
+
+.articlesWidget__articles {
+  list-style: none;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+
+.article {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.article:last-child {
+  border-bottom: none;
+}
+.article__link {
+  color: #404040;
+  display: block;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color .21s cubic-bezier(.455,.03,.515,.955);
+}
+
+.article__link:hover {
+  background-color: #f9f9f9;
+}
+
+.article__link:after {
+  color: #009cde;
+  content: "\f054";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-size: 22px;
+  font-weight: 900;
+  vertical-align: middle;
+  transition: transform .25s cubic-bezier(.175,.885,.32,1.275);
+  
+}
+
+.article__link:hover:after {
+  transform: translateX(5px);
+}
+
+.article__fulltext {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 18px);  
+}
+
+.article__publishedTime {
+  display: block;
+  font-size: 10px;
+  font-stretch: condensed;
+  color: #848484;
+}
+
+.articlesWidget__loadMore {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.articlesWidget__loadMore button {
+  background-color: #dddddd;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 32px;
+  position: relative;
+  width: 150px;
+}
+
+.articlesWidget__loadMore button:after {
+  /* I copied the shiny effect from https://codepen.io/aundrekerr/pen/GtLul/ */
+  background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.03) 1%,rgba(255,255,255,0.6) 30%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0.85) 70%,rgba(255,255,255,0.85) 71%,rgba(255,255,255,0) 100%); /* W3C */;
+  content: " ";
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: skew(-10deg);
+  width: 10px;  
+}
+
+.articlesWidget__loadMore button:hover {
+  background-color: #e8e8e8;
+}
+
+.articlesWidget__loadMore button:hover:after {
+  animation: shinyEffect 1s forwards;
+  display: inline-block;
+}
+
+.articlesWidget__loadMore button:hover:active {
+  background-color: #d0d0d0;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  left: 1px;
+  top:3px;
+}
+
+@keyframes shinyEffect {
+	0%  { left: 0; opacity: 0; }
+	5% { opacity: 0 }
+	48% {opacity: 0.5 }
+	80% {opacity: 0 }
+	100% { left: 100% }
+}
+
+.articlesWidget__text {
+  line-height: 1.6rem;
+  color: #404040;
+  padding: 20px 10px;
+}
+
+.articlesWidget__text a {
+  color: #009cde;
+  text-decoration: none;
+}
